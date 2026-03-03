@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Bangaly | Restaurant guineen Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">Casa Bangaly</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#testimonials">Avis</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Une expérience guineenne d'exception</h1>
+        <p>Saveurs authentiques • Produits frais • Ambiance élégante</p>
+        <button class="btn" id="openModal">Réserver une table</button>
+    </div>
+</section>
+
+<section id="about" class="about fade-in">
+    <div class="container">
+        <div class="about-text">
+            <h2>Notre Histoire</h2>
+            <p>
+                Depuis 2012, Casa Bangaly sublime la gastronomie guineenne avec des produits importés de la guinee
+                et des recettes transmises de génération en génération.
+            </p>
+        </div>
+        <div class="about-img"></div>
+    </div>
+</section>
+
+<section id="menu" class="menu fade-in">
+    <h2>Notre Menu Signature</h2>
+    <div class="menu-grid">
+        <div class="card">
+            <h3>Pizza Truffe</h3>
+            <p>Crème, mozzarella di bufala, truffe noire</p>
+            <span>18€</span>
+        </div>
+        <div class="card">
+            <h3>Risotto Fruits de Mer</h3>
+            <p>Crevettes, moules, parmesan affiné</p>
+            <span>22€</span>
+        </div>
+        <div class="card">
+            <h3>Tiramisu Royal</h3>
+            <p>Mascarpone maison, cacao premium</p>
+            <span>10€</span>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery fade-in">
+    <h2>Galerie</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item"></div>
+        <div class="gallery-item"></div>
+        <div class="gallery-item"></div>
+        <div class="gallery-item"></div>
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials fade-in">
+    <h2>Avis Clients</h2>
+    <div class="testimonial-container">
+        <div class="testimonial active">"Un voyage culinaire incroyable !" – Doumbouya</div>
+        <div class="testimonial">"Service parfait et ambiance magnifique." – Saliou</div>
+        <div class="testimonial">"Le meilleur guinéen  de la ville." – Lancinet</div>
+    </div>
+</section>
+
+<section id="contact" class="contact fade-in">
+    <h2>Contact</h2>
+    <form id="contact-form">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+    </form>
+    <p id="form-message"></p>
+</section>
+
+<footer>
+    <p>© 2026 Casa Bangaly - Tous droits réservés</p>
+</footer>
+
+<div class="modal" id="reservationModal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h3>Réserver une table</h3>
+        <input type="text" placeholder="Nom">
+        <input type="date">
+        <input type="time">
+        <button class="btn">Confirmer</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

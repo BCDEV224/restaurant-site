@@ -1,0 +1,60 @@
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+body { font-family:'Poppins', sans-serif; color:#333; }
+
+.header { position:fixed; width:100%; background:#111; z-index:1000; }
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; }
+.logo { color:#fff; font-weight:700; font-size:24px; }
+
+.nav-links { list-style:none; display:flex; gap:20px; }
+.nav-links a { color:#fff; text-decoration:none; transition:0.3s; }
+.nav-links a:hover { color:#e63946; }
+
+.burger { display:none; flex-direction:column; cursor:pointer; }
+.burger span { height:3px; width:25px; background:white; margin:4px; }
+
+.hero { height:100vh; background:url('https://images.unsplash.com/photo-1498579150354-977475b7ea0b') center/cover no-repeat; display:flex; justify-content:center; align-items:center; position:relative; text-align:center; color:#fff; }
+.overlay { position:absolute; inset:0; background:rgba(0,0,0,0.6); }
+.hero-content { position:relative; max-width:700px; animation:fadeUp 1.5s ease; }
+.hero h1 { font-size:50px; margin-bottom:20px; }
+
+.btn { background:#e63946; color:#fff; padding:12px 25px; border:none; border-radius:5px; cursor:pointer; transition:0.3s; }
+.btn:hover { background:#c1121f; }
+
+section { padding:120px 40px; text-align:center; }
+.container { display:flex; gap:40px; align-items:center; justify-content:center; flex-wrap:wrap; }
+.about-img { width:400px; height:300px; background:url('https://images.unsplash.com/photo-1541542684-4aaf1f3fbc6b') center/cover; border-radius:10px; }
+
+.menu-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; margin-top:40px; }
+.card { background:#f8f8f8; padding:30px; border-radius:10px; transition:0.4s; }
+.card:hover { transform:translateY(-10px); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
+
+.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
+.gallery-item { height:200px; background:url('https://source.unsplash.com/400x400/?italian-food') center/cover; border-radius:10px; transition:0.3s; }
+.gallery-item:hover { transform:scale(1.05); }
+
+.testimonial-container { position:relative; max-width:600px; margin:auto; }
+.testimonial { display:none; font-style:italic; }
+.testimonial.active { display:block; }
+
+.contact form { max-width:500px; margin:auto; display:flex; flex-direction:column; gap:15px; }
+input, textarea { padding:10px; border:1px solid #ccc; border-radius:5px; }
+
+footer { background:#111; color:#fff; padding:20px; }
+
+.fade-in { opacity:0; transform:translateY(40px); transition:1s; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; }
+.modal-content { background:#fff; padding:30px; border-radius:10px; text-align:center; width:300px; }
+.close { cursor:pointer; float:right; font-size:20px; }
+
+@keyframes fadeUp {
+    from { opacity:0; transform:translateY(40px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+@media(max-width:768px){
+    .nav-links { position:absolute; right:0; top:70px; background:#111; flex-direction:column; width:200px; display:none; padding:20px; }
+    .nav-links.active { display:flex; }
+    .burger { display:flex; }
+}
